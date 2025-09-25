@@ -1,0 +1,10 @@
+$rm_tree_leaf $mol_view
+	dom_name \li
+	connection_path? \
+	sub /
+		<= Label $mol_paragraph
+			dom_name \span
+			title <=> title \...
+			event *
+				click? <=> show_connection_path? null
+		^ branches /

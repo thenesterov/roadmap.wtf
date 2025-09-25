@@ -1,0 +1,51 @@
+[rm_tree] {
+	position: relative;
+
+	--rm_tree_line: hsl( var(--mol_theme_hue), 0%, 75%, 1 );
+}
+
+[rm_tree] [rm_tree_branch] {
+	margin-left: 2rem;
+}
+
+[rm_tree] [rm_tree_branch]::before {
+	content: "";
+	position: absolute;
+	top: 0px;
+	bottom: 0;
+	left: -1.25rem;
+	border-left: 1px solid var(--rm_tree_line);
+}
+
+[rm_tree] [rm_tree_leaf]::before {
+	content: "";
+	position: absolute;
+	top: 0.5rem;
+	left: -1.25rem;
+	width: 1.25rem;
+	height: 1.5rem;
+	border-bottom: 1px solid var(--rm_tree_line);
+	border-left: 1px solid var(--rm_tree_line);
+	border-bottom-left-radius: 0.6rem;
+}
+
+[rm_tree_connection_lines_plot] {
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: visible;
+	pointer-events: none;
+}
+
+[rm_tree_connection_lines] {
+	stroke: var(--mol_theme_control);
+	stroke-width: 2;
+	fill: none;
+	stroke-dasharray: 5 5;
+}
+
+[rm_tree_connection_dots] {
+	fill: var(--mol_theme_back);
+	stroke: var(--mol_theme_control);
+	stroke-width: 2;
+}

@@ -1,0 +1,8 @@
+$rm_tree $mol_view
+	sub /
+		^ branches /
+		<= Connection_lines_plot $mol_svg sub /
+			<= Connection_lines $mol_svg_path
+				geometry <= connection_lines \
+			<= Connection_dots $mol_svg_path
+				geometry <= connection_dots \

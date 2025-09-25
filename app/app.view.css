@@ -1,0 +1,4 @@
+:root {
+	/* отключение подсветки тапов на мобильных устройствах */
+	-webkit-tap-highlight-color: transparent;
+}

@@ -1,0 +1,22 @@
+[rm_tree_leaf] {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	user-select: none;
+
+	position: relative;
+	flex-direction: column;
+
+	width: max-content;
+}
+
+[rm_tree_leaf_label] {
+	cursor: pointer;
+	margin: 0.35rem 0 0.35rem 0.35rem;
+	padding: 0.25rem 0.75rem;
+	background: var(--mol_theme_card);
+	border-radius: 0.35rem;
+	align-self: flex-start;
+	box-shadow: 1px 1px 5px -2px rgba(0, 0, 0, 0.2);
+	min-height: 0 !important;
+}
