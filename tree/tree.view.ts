@@ -29,7 +29,11 @@ namespace $.$$ {
 		}
 
 		@ $mol_mem
-		connection_path(label?: HTMLElement): [string, string] {
+		connection_path(label?: HTMLElement | null): [string, string] {
+			if (!label) {
+				return ["", ""]
+			}
+
 			const path = this.path(label);
 
 			if (!path.length) return ["", ""]

@@ -4,7 +4,7 @@ $rm_app $mol_page
 		<= Theme $mol_theme_auto
 	body /
 		<= Tree $rm_tree
-			connection_path? => connection_path? \
+			connection_path? => connection_path? null
 			branches <= branches /$rm_tree_branch
 	-
 	Branch* $rm_tree_branch

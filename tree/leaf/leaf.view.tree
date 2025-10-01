@@ -1,10 +1,13 @@
 $rm_tree_leaf $mol_view
 	dom_name \li
-	connection_path? \
+	connection_path? null
 	sub /
 		<= Label $mol_paragraph
 			dom_name \span
 			title <=> title \...
 			event *
-				click? <=> show_connection_path? null
+				focus? <=> show_connection_path? null
+				blur? <=> hide_connection_path? null
+			attr *
+				tabindex 0
 		^ branches /

@@ -3,5 +3,9 @@ namespace $.$$ {
 		show_connection_path(next?: FocusEvent) {
 			this.connection_path(next?.target as any)
 		}
+
+		hide_connection_path(next?: any) {
+			this.connection_path(null);
+		}
 	}
 }
