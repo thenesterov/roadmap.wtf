@@ -1,5 +1,5 @@
 $rm_tree $mol_view
-	connection_path null
+	connection_path? null
 	sub /
 		^ branches /
 		<= Connection_lines_plot $mol_svg sub /
