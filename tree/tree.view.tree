@@ -1,5 +1,5 @@
 $rm_tree $mol_view
-	connection_path? null
+	tree /
 	sub /
 		^ branches /
 		<= Connection_lines_plot $mol_svg sub /
@@ -7,3 +7,10 @@ $rm_tree $mol_view
 				geometry <= connection_lines \
 			<= Connection_dots $mol_svg_path
 				geometry <= connection_dots \
+	-
+	Branch* $rm_tree_branch
+		sub / ^ leafs* /$rm_tree_leaf
+	Leaf* $rm_tree_leaf
+		title <= leaf_title* \...
+		branches <= leaf_branches* /$rm_tree_branch
+		connection_path? <=> connection_path? null

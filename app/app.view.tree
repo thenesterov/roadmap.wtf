@@ -4,12 +4,4 @@ $rm_app $mol_page
 		<= Theme $mol_theme_auto
 	body /
 		<= Tree $rm_tree
-			connection_path? => connection_path? null
-			branches <= branches /$rm_tree_branch
-	-
-	Branch* $rm_tree_branch
-		sub / ^ leafs* /$rm_tree_leaf
-	Leaf* $rm_tree_leaf
-		title <= leaf_title* \...
-		branches <= leaf_branches* /$rm_tree_branch
-		connection_path? <=> connection_path?
+			tree <= tree /
